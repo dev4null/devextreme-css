@@ -24,32 +24,6 @@
           <div>{{ title }}</div>
         </template>
       </dx-item>
-
-      <dx-item
-        location="after"
-        locate-in-menu="auto"
-        menu-item-template="menuUserItem"
-      >
-        <template #default>
-          <div>
-            <dx-button
-              class="user-button authorization"
-              :width="210"
-              height="100%"
-              styling-mode="text"
-            >
-              <user-panel :user="user" :menu-items="userMenuItems" menu-mode="context" />
-            </dx-button>
-          </div>
-        </template>
-      </dx-item>
-      <template #menuUserItem>
-        <user-panel
-          :user="user"
-          :menu-items="userMenuItems"
-          menu-mode="list"
-        />
-      </template>
     </dx-toolbar>
   </header>
 </template>
@@ -57,63 +31,30 @@
 <script>
 import DxButton from "devextreme-vue/button";
 import DxToolbar, { DxItem } from "devextreme-vue/toolbar";
-import auth from "../auth";
-
-import UserPanel from "./user-panel";
 
 export default {
   props: {
     menuToggleEnabled: Boolean,
     title: String,
     toggleMenuFunc: Function,
-    logOutFunc: Function
   },
   created() {
-    auth.getUser().then((e) => this.user = e.data);
+    
   },
   data() {
-    return {
-      user: { },
-      userMenuItems: [
-        {
-          text: "Profile",
-          icon: "user",
-          onClick: this.onProfileClick
-        },
-        {
-          text: "Logout",
-          icon: "runner",
-          onClick: this.onLogoutClick
-        }
-      ]
-    };
+    return {};
   },
   methods: {
-    onLogoutClick() {
-      auth.logOut();
-      this.$router.push({
-        path: "/login-form",
-        query: { redirect: this.$route.path }
-      });
-    },
-    onProfileClick() {
-      this.$router.push({
-        path: "/profile",
-        query: { redirect: this.$route.path }
-      });
-    }
   },
   components: {
     DxButton,
     DxToolbar,
     DxItem,
-    UserPanel
   }
 };
 </script>
 
 <style lang="scss">
-@import "../themes/generated/variables.base.scss";
 @import "../dx-styles.scss";
 
 .header-component {
@@ -121,9 +62,6 @@ export default {
   z-index: 1;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
-  .dx-toolbar .dx-toolbar-item.menu-button > .dx-toolbar-item-content .dx-icon {
-    color: $base-accent;
-  }
 }
 
 .dx-toolbar.header-toolbar .dx-toolbar-items-container .dx-toolbar-after {

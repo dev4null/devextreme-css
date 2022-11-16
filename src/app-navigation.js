@@ -9,12 +9,12 @@ export default [
     icon: "folder",
     items: [
       {
-        text: "Profile",
-        path: "/profile"
+        text: "Tabs",
+        path: "/tabs"
       },
       {
-        text: "Tasks",
-        path: "/tasks"
+        text: "Grid",
+        path: "/grid"
       }
     ]
   }

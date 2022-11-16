@@ -1,3 +1,6 @@
+
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
 .content {
   line-height: 1.5;
 
@@ -27,23 +30,5 @@
   }
 }
 
-.dx-card.wide-card {
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 0;
-  border-right: 0;
-  border-left: 0;
-}
-
-.with-footer > .dx-scrollable-wrapper >
-.dx-scrollable-container > .dx-scrollable-content {
-  height: 100%;
-
-  & > .dx-scrollview-content {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-  }
-}
 
 $side-panel-min-width: 60px;

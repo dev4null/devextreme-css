@@ -95,7 +95,6 @@ export default {
 
 <style lang="scss">
 @import "../dx-styles.scss";
-@import "../themes/generated/variables.additional.scss";
 
 .side-navigation-menu {
   display: flex;
@@ -146,7 +145,7 @@ export default {
       .dx-treeview-node {
         &[aria-level="1"] {
           font-weight: bold;
-          border-bottom: 1px solid $base-border-color;
+          border-bottom: 1px solid;
         }
 
         &[aria-level="2"] .dx-treeview-item-content {
@@ -163,14 +162,6 @@ export default {
         .dx-treeview-node {
           &.dx-state-selected:not(.dx-state-focused) > .dx-treeview-item {
             background: transparent;
-          }
-
-          &.dx-state-selected > .dx-treeview-item * {
-            color: $base-accent;
-          }
-
-          &:not(.dx-state-focused) > .dx-treeview-item.dx-state-hover {
-            background-color: lighten($base-bg, 4);
           }
         }
       }

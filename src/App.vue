@@ -11,7 +11,6 @@
           <router-view name="content" />
         </div>
         <template #footer>
-          <app-footer />
         </template>
       </router-view>
     </div>
@@ -19,7 +18,6 @@
 </template>
 
 <script>
-import AppFooter from "./components/app-footer";
 import { sizes, subscribe, unsubscribe } from "./utils/media-query";
 
 function getScreenSizeInfo() {
@@ -60,7 +58,6 @@ export default {
   },
 
   components: {
-    AppFooter
   }
 };
 </script>
@@ -82,8 +79,6 @@ body {
 }
 
 .app {
-  @import "./themes/generated/variables.base.scss";
-  background-color: darken($base-bg, 5);
   display: flex;
   height: 100%;
   width: 100%;

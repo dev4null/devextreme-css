@@ -25,8 +25,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../themes/generated/variables.base.scss";
-
 .single-card {
   width: 100%;
   height: 100%;
@@ -51,14 +49,12 @@ export default {
       margin-bottom: 30px;
 
       .title {
-        color: $base-text-color;
         line-height: 28px;
         font-weight: 500;
         font-size: 24px;
       }
 
       .description {
-        color: rgba($base-text-color, alpha($base-text-color) * 0.7);
         line-height: 18px;
       }
     }

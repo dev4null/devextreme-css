@@ -88,48 +88,6 @@
             </g>
           </svg>
         </div>
-
-        <p>
-          Thanks for using the DevExtreme Vue App Template.
-        </p>
-        <p>This application was built using <a href="https://cli.vuejs.org/" target="_blank" rel="noopener noreferrer">Vue CLI</a> 
-          and <a href="https://js.devexpress.com/Documentation/Guide/Common/DevExtreme_CLI/" target="_blank" rel="noopener noreferrer">DevExtreme CLI</a>
-          and includes the following DevExtreme components:</p>
-        <ul>
-          <li>
-            <a href="https://js.devexpress.com/Documentation/Guide/UI_Components/DataGrid/Getting_Started_with_DataGrid/" target="_blank" rel="noopener noreferrer">DataGrid</a>
-          </li>
-          <li>
-            <a href="https://js.devexpress.com/Documentation/Guide/Widgets/Form/Overview/" target="_blank" rel="noopener noreferrer">Form</a>
-          </li>
-          <li>
-            <a href="https://js.devexpress.com/Documentation/Guide/Widgets/Drawer/Getting_Started_with_Navigation_Drawer/" target="_blank" rel="noopener noreferrer">Drawer</a>
-          </li>
-        </ul>
-
-        <p>
-          To customize your DevExtreme Vue application further, please refer to the following help topics:
-        </p>
-
-        <ul>
-          <li>
-            <a href="https://js.devexpress.com/Documentation/Guide/Vue_Components/Application_Template/#Layouts" target="_blank" rel="noopener noreferrer">Layouts</a>
-          </li>
-          <li>
-            <a href="https://js.devexpress.com/Documentation/Guide/Vue_Components/Application_Template/#Add_a_New_View" target="_blank" rel="noopener noreferrer">Add a New View</a>
-          </li>
-          <li>
-            <a href="https://js.devexpress.com/Documentation/Guide/Vue_Components/Application_Template/#Configure_the_Navigation_Menu" target="_blank" rel="noopener noreferrer">Configure the Navigation Menu</a>
-          </li>
-          <li>
-            <a href="https://js.devexpress.com/Documentation/Guide/Vue_Components/Application_Template/#Configure_Themes" target="_blank" rel="noopener noreferrer">Configure Themes</a>
-          </li>
-        </ul>
-         <p>
-          For technical content related to DevExtreme Vue components, feel free to explore 
-          our <a href="https://js.devexpress.com/documentation/" target="_blank" rel="noopener noreferrer">online documentation</a>
-          and <a href="https://js.devexpress.com/Demos/Widgetsgallery/" target="_blank" rel="noopener noreferrer">technical demos</a>.
-        </p>
       </div>
     </div>
   </div>
