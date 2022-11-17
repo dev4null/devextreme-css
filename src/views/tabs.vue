@@ -9,7 +9,19 @@
         :show-nav-buttons="true"
         :focus-state-enabled="false"
         :selectedIndex = "2"
+        :hover-state-enabled="false"
       />
+<br/>
+      <DxTabs
+        :data-source="longtabs"
+        :width="1200"
+        :scroll-by-content="true"
+        :show-nav-buttons="false"
+        :focus-state-enabled="false"
+        :selectedIndex = "2"
+        :hover-state-enabled="false"
+      />
+
     </div>
   </div>
 </template>
@@ -28,11 +40,7 @@ export default {
   { text: 'Коммуникации' },
   { text: 'Адреса и телефоны' },
   { text: 'Все продукты' },
-  { text: 'Лиды' },
-  { text: 'Связанные продажи' },
-  { text: 'Связанные продажи - 2' },
-  { text: 'Связанные продажи - 3' },
-  { text: 'Связанные продажи - 4' },
+  { text: 'Лиды' }
   ]
      
     };

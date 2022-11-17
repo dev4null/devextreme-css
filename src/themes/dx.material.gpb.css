@@ -4380,7 +4380,7 @@
 .dx-tabs-nav-button {
   width: 25px;
   padding: 0;
-  top: 1px;
+  top: 0px;
 }
 .dx-tabs-nav-button-left {
   left: 0;
@@ -4466,7 +4466,6 @@
   box-shadow: none;
 }
 .dx-tabs-nav-button.dx-button.dx-tabs-nav-button.dx-button-has-icon:not(.dx-button-has-text) {
-  background-color: transparent;
   color: rgba(0,0,0,.54);
   -webkit-box-shadow: none;
   box-shadow: none;
