@@ -4510,7 +4510,7 @@
   background-color: #e9efff;
 }
 .dx-tabs-nav-button.dx-state-disabled .dx-button-content {
-  opacity: 0;
+  opacity: .8;
 }
 .dx-tab {
   padding: 20px 24px;

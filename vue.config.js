@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "devextreme-css" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/dev-css/" : "/",
 };
