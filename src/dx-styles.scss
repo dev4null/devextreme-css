@@ -1,9 +1,7 @@
-
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 
 .content {
   line-height: 1.5;
-
   h2 {
     font-size: 30px;
     margin-top: 20px;
@@ -15,11 +13,6 @@
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 20px;
-
-  .screen-x-small & {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
 }
 
 .responsive-paddings {

@@ -13,6 +13,10 @@ export default [
         path: "/tabs"
       },
       {
+        text: "Inputs",
+        path: "/inputs"
+      },      
+      {
         text: "Grid",
         path: "/grid"
       }

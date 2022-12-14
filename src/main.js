@@ -1,4 +1,4 @@
-import './themes/dx.material.gpb.css';
+import './themes/dx.generic.gpb.css';
 import Vue from "vue";
 
 import App from "./App";

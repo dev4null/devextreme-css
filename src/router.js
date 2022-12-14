@@ -2,7 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/home";
 import Grid from "./views/grid";
-import Tabs from "./views/tabs"
+import Tabs from "./views/tabs";
+import Inputs from "./views/inputs"
 import defaultLayout from "./layouts/side-nav-outer-toolbar";
 
 
@@ -32,6 +33,14 @@ const router = new Router({
       components: {
         layout: defaultLayout,
         content: Tabs
+      }
+    },
+    {
+      path: "/inputs",
+      name: "inputs",
+      components: {
+        layout: defaultLayout,
+        content: Inputs
       }
     },
     
