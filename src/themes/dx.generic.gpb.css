@@ -2422,13 +2422,14 @@
 }
 .dx-button-has-icon .dx-icon {
   background-position: 0 0;
-  background-size: 20px 20px;
+  background-size: 22px 22px;
   padding: 0;
-  font-size: 22px;
+  font-size: 24px;
   text-align: center;
-  line-height: 22px;
+  line-height: 24px;
   margin-right: 0;
-  margin-left: 0;
+  margin-left: -6px;
+  margin-top: -4px;
 }
 .dx-button-has-icon .dx-icon.dx-icon-right,
 .dx-rtl .dx-button-has-icon .dx-icon,
@@ -4036,8 +4037,12 @@
   font-size: 13px;
   line-height: normal;
 }
+/*fix border color*/
 .dx-tabs {
   border: 1px solid #e9efff;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: #e9efff
 }
 .dx-tabs-scrollable {
   margin: -1px;
@@ -4056,6 +4061,8 @@
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 .dx-tabs-nav-button .dx-button-content {
   padding: 0;
@@ -4071,7 +4078,7 @@
 }
 .dx-tab {
   padding: 17px 24px;
-  background-color: #e9efff;
+ /* background-color: #e9efff; */
   color: #262c40;
 }
 .dx-rtl .dx-tab .dx-icon,
@@ -4107,7 +4114,7 @@
   z-index: 1;
 }
 .dx-tab.dx-tab-selected {
-  background-color: #e9efff;
+ 
   color: #476ef9;
 }
 .dx-tab-selected::after {
@@ -4474,7 +4481,7 @@
   border-radius: 8px;
 }
 .dx-texteditor.dx-state-readonly {
-  border-style: dashed;
+  border-style: solid;
 }
 .dx-texteditor.dx-state-readonly.dx-editor-filled {
   border-color: transparent;
@@ -4487,7 +4494,7 @@
   background-color: rgba(51,122,183,.07);
 }
 .dx-texteditor.dx-state-readonly.dx-editor-underlined {
-  border-style: none none dashed;
+  border-style: none none solid;
 }
 .dx-texteditor.dx-state-hover {
   border-color: rgba(51,122,183,.4);
@@ -5090,8 +5097,8 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-disabled .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly .dx-texteditor-label .dx-label {
-  border-bottom: 1px dashed #ddd;
-  border-top: 1px dashed #ddd;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled .dx-texteditor-label .dx-label span,
@@ -5117,10 +5124,10 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly .dx-texteditor-label .dx-label-after,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly .dx-texteditor-label .dx-label-before {
   border-color: #ddd;
-  border-style: dashed;
+  border-style: solid;
   height: 100%;
-  border-top: 1px dashed #ddd;
-  border-bottom: 1px dashed #ddd;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly.dx-textarea .dx-texteditor-label .dx-label span,
@@ -5157,8 +5164,8 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-disabled.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label {
-  border-bottom: 1px dashed rgba(51,122,183,.4);
-  border-top: 1px dashed rgba(51,122,183,.4);
+  border-bottom: 1px solid rgba(51,122,183,.4);
+  border-top: 1px solid rgba(51,122,183,.4);
   height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label span,
@@ -5184,10 +5191,10 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label-after,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label-before {
   border-color: rgba(51,122,183,.4);
-  border-style: dashed;
+  border-style: solid;
   height: 100%;
-  border-top: 1px dashed rgba(51,122,183,.4);
-  border-bottom: 1px dashed rgba(51,122,183,.4);
+  border-top: 1px solid rgba(51,122,183,.4);
+  border-bottom: 1px solid rgba(51,122,183,.4);
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-readonly.dx-state-hover.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly.dx-state-readonly.dx-state-hover.dx-textarea .dx-texteditor-label .dx-label span,
@@ -5260,8 +5267,8 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label {
-  border-bottom: 1px dashed #476ef9;
-  border-top: 1px dashed #476ef9;
+  border-bottom: 1px solid #476ef9;
+  border-top: 1px solid #476ef9;
   height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused .dx-texteditor-label .dx-label span,
@@ -5323,10 +5330,10 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before {
   border-color: #476ef9;
-  border-style: dashed;
+  border-style: solid;
   height: 100%;
-  border-top: 1px dashed #476ef9;
-  border-bottom: 1px dashed #476ef9;
+  border-top: 1px solid #476ef9;
+  border-bottom: 1px solid #476ef9;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-textarea .dx-texteditor-label .dx-label span,
@@ -5461,7 +5468,7 @@
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label {
-  border-bottom: 1px dashed rgba(51,122,183,.4);
+  border-bottom: 1px solid rgba(51,122,183,.4);
   border-top: 0;
   height: 100%;
   padding: 0 2px;
@@ -5481,9 +5488,9 @@
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label-after,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label-before {
   border-color: rgba(51,122,183,.4);
-  border-style: dashed;
-  border-top: 1px dashed rgba(51,122,183,.4);
-  border-bottom: 1px dashed rgba(51,122,183,.4);
+  border-style: solid;
+  border-top: 1px solid rgba(51,122,183,.4);
+  border-bottom: 1px solid rgba(51,122,183,.4);
   height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-state-hover .dx-lookup-field,
@@ -5492,13 +5499,13 @@
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-before {
-  border-right: 1px dashed rgba(51,122,183,.4);
+  border-right: 1px solid rgba(51,122,183,.4);
   border-radius: 0 8px 8px 0;
   border-left: 0;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-after,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-after {
-  border-left: 1px dashed rgba(51,122,183,.4);
+  border-left: 1px solid rgba(51,122,183,.4);
   border-radius: 8px 0 0 8px;
   border-right: 0;
 }
@@ -5519,7 +5526,7 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-disabled .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly .dx-texteditor-label .dx-label {
-  border-bottom: 1px dashed #ddd;
+  border-bottom: 1px solid #ddd;
   border-top: 0;
   height: 100%;
   padding: 0 2px;
@@ -5545,9 +5552,9 @@
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly .dx-texteditor-label .dx-label-after,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly .dx-texteditor-label .dx-label-before {
   border-color: #ddd;
-  border-style: dashed;
-  border-top: 1px dashed #ddd;
-  border-bottom: 1px dashed #ddd;
+  border-style: solid;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-disabled .dx-lookup-field,
@@ -5560,7 +5567,7 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-disabled.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-rtl .dx-texteditor-label .dx-label-before {
-  border-right: 1px dashed #ddd;
+  border-right: 1px solid #ddd;
   border-radius: 0 8px 8px 0;
   border-left: 0;
 }
@@ -5568,7 +5575,7 @@
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-rtl .dx-texteditor-label .dx-label-after,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-disabled.dx-rtl .dx-texteditor-label .dx-label-after,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-rtl .dx-texteditor-label .dx-label-after {
-  border-left: 1px dashed #ddd;
+  border-left: 1px solid #ddd;
   border-radius: 8px 0 0 8px;
   border-right: 0;
 }
@@ -16919,10 +16926,8 @@ input.dx-hidden {
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tabs {
   display: block;
   border: none;
-  background-color: #e9efff;
+  background-color: #fff;
   color: #e9efff;
-  -webkit-box-shadow: inset 0 -1px #e9efff,inset 0 1px,inset -1px 0,inset 1px 0;
-  box-shadow: inset 0 -1px #e9efff,inset 0 1px,inset -1px 0,inset 1px 0;
 }
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tabs .dx-tab {
   color: #e9efff;
@@ -16939,8 +16944,8 @@ input.dx-hidden {
 }
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tab {
   width: 140px;
-  -webkit-box-shadow: inset 0 1px,inset 0 -1px #e9efff;
-  box-shadow: inset 0 1px,inset 0 -1px #e9efff;
+  -webkit-box-shadow: inset 0 0px #ddd, inset 0 0px, inset 0px 0, inset 0px 0;
+	box-shadow: inset 0 0px #ddd, inset 0 0px, inset 0px 0, inset 0px 0;
 }
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tabs-scrollable {
   margin-top: 0;
@@ -16955,16 +16960,22 @@ input.dx-hidden {
   border-top: none;
 }
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tab.dx-tab-selected {
-  -webkit-box-shadow: inset 0 1px #e9efff,inset -1px 0 #e9efff,inset 1px 0 #e9efff;
-  box-shadow: inset 0 1px #e9efff,inset -1px 0 #e9efff,inset 1px 0 #e9efff;
+  -webkit-box-shadow: inset 0 0px #ddd, inset 0px 0 #ddd, inset 0px 0 #ddd;
+	box-shadow: inset 0 0px #ddd, inset 0px 0 #ddd, inset 0px 0 #ddd;
+
+  border: 1px;
+	border-bottom: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #2355d7;
+
 }
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tab.dx-tab-active .dx-tab-content,
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tab.dx-tab-selected .dx-tab-content {
-  color: #476ef9;
+  color: #2355d7;
 }
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tabs-expanded .dx-tab:not(.dx-tab-selected):first-of-type {
-  -webkit-box-shadow: inset 0 -1px #e9efff,inset 1px 0,inset 0 1px;
-  box-shadow: inset 0 -1px #e9efff,inset 1px 0,inset 0 1px;
+  -webkit-box-shadow: inset 0 0px #ddd, inset 0px 0, inset 0 0px;
+	box-shadow: inset 0 0px #ddd, inset 0px 0, inset 0 0px;
 }
 .dx-rtl .dx-tabpanel>.dx-tabpanel-tabs .dx-tabs-expanded .dx-tab:not(.dx-tab-selected):first-of-type,
 .dx-rtl.dx-tabpanel>.dx-tabpanel-tabs .dx-tabs-expanded .dx-tab:not(.dx-tab-selected):first-of-type,
@@ -16986,8 +16997,9 @@ input.dx-hidden {
   border-color: #e9efff;
 }
 .dx-tabpanel.dx-state-focused > .dx-tabpanel-tabs .dx-tabs {
-  -webkit-box-shadow: inset 0 -1px #337ab7,inset 0 1px,inset -1px 0,inset 1px 0;
+ /* -webkit-box-shadow: inset 0 -1px #337ab7,inset 0 1px,inset -1px 0,inset 1px 0;
   box-shadow: inset 0 -1px #337ab7,inset 0 1px,inset -1px 0,inset 1px 0;
+  */
 }
 .dx-tabpanel.dx-state-focused > .dx-tabpanel-tabs .dx-tab {
   -webkit-box-shadow: inset 0 1px,inset 0 -1px #337ab7;
@@ -17025,7 +17037,7 @@ input.dx-hidden {
   border-color: #337ab7;
 }
 .dx-tabpanel .dx-multiview-wrapper {
-  border: 1px solid #e9efff;
+  border: 0px;
 }
 .dx-fileuploader.dx-state-disabled .dx-fileuploader-input {
   display: none;

@@ -4,6 +4,7 @@ import Home from "./views/home";
 import Grid from "./views/grid";
 import Tabs from "./views/tabs";
 import Inputs from "./views/inputs"
+import Buttons from "./views/buttons"
 import defaultLayout from "./layouts/side-nav-outer-toolbar";
 
 
@@ -43,7 +44,14 @@ const router = new Router({
         content: Inputs
       }
     },
-    
+    {
+      path: "/buttons",
+      name: "buttons",
+      components: {
+        layout: defaultLayout,
+        content: Buttons
+      }
+    },   
     {
       path: "/",
       redirect: "/home"

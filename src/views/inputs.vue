@@ -2,42 +2,106 @@
   <div class="content-block">
     <h2>Inputs <a href="https://www.figma.com/file/QBuh5OJf5xnjfx0Ecm4hvO/%F0%9F%A6%85--%F0%9F%A6%A9-CRM-Corporate-%2F-UI-kit?node-id=2%3A804&t=rL2fm8QEz8RwQgFg-0" target="_blank">Figma</a></h2>
 
-    <div>TextBox Simple</div>
-    <div class="row">
-      <div class="column"> <DxTextBox label="Label" value ="" label-mode ="floating" :height="58" :hover-state-enabled="false" :show-clear-button="true"/></div>
-      <div class="column"> <DxTextBox label="Label" value ="Text" label-mode ="floating" :height="58" :hover-state-enabled="false" :show-clear-button="true"/> </div>
-    </div>
 
-    <div class="row">
-      <div class="column"> <DxTextBox label="Label" value ="" :disabled="true" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true"  /></div>
-      <div class="column"> <DxTextBox label="Label" value ="Text" :disabled="true" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true" /> </div>
-    </div>
+    <table>
+      <tr>
+        <th  width="300px">&nbsp;</th>
+        <th width="350px">Active</th>
+        <th  width="350px">ReadOnly</th>
+        <th  width="350px">Disabled</th>
+      </tr>
+      <tr>
+        <td>TextBox Simple Empty</td>
+        <td>
+          <DxTextBox label="Label" value ="" label-mode ="floating" :height="58" :hover-state-enabled="false" :show-clear-button="true"/>
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="" :read-only="true" label-mode ="floating" :height="58" :hover-state-enabled="false" :show-clear-button="true"/> 
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="" :disabled="true" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true"  />
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :height="58" :hover-state-enabled="false" :show-clear-button="true"/>
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="Text" :read-only="true" label-mode ="floating" :height="58" :hover-state-enabled="false" :show-clear-button="true"/> 
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="Text" :disabled="true" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true"  />
+        </td>
+      </tr>
+      <tr>
+        <td>TextBox Simple with validation</td>
+        <td>
+          <DxTextBox label="Label"  value ="" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true"> 
+            <DxValidator>
+                <DxRequiredRule message="Text field is required"/>
+            </DxValidator>
+          </DxTextBox>
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="" validation-Status="invalid" label-mode ="floating"  :read-only="true" :height="56" :hover-state-enabled="false" :show-clear-button="true">
+            <DxValidator>
+              <DxCustomRule 
+                        message="Error" 
+                        :validation-callback="customCallback"
+                        :reevaluate="true"
+                    />
+              </DxValidator>
+          </DxTextBox>
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :disabled="true" :height="56" :hover-state-enabled="false" :show-clear-button="true">
+            <DxValidator>
+              <DxCustomRule 
+                        message="Error" 
+                        :validation-callback="customCallback"
+                        :reevaluate="true"
+                    />
+              </DxValidator>
+          </DxTextBox>         
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true"> 
+            <DxValidator>
+                <DxRequiredRule message="Text field is required"/>
+            </DxValidator>
+          </DxTextBox>
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :read-only="true" :height="56" :hover-state-enabled="false" :show-clear-button="true">
+            <DxValidator>
+              <DxCustomRule 
+                        message="Error" 
+                        :validation-callback="customCallback"
+                        :reevaluate="true"
+                    />
+              </DxValidator>
+          </DxTextBox>
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :disabled="true" :height="56" :hover-state-enabled="false" :show-clear-button="true">
+            <DxValidator>
+              <DxCustomRule 
+                        message="Error" 
+                        :validation-callback="customCallback"
+                        :reevaluate="true"
+                    />
+              </DxValidator>
+          </DxTextBox>         
+        </td>
+      </tr>
 
-    <div>TextBox Simple with validation</div>
-    <div class="row">
-      <div class="column"> 
-        <DxTextBox label="Label"  value ="" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true"> 
-          <DxValidator>
-              <DxRequiredRule message="Text field is required"/>
-          </DxValidator>
-      </DxTextBox>
-      </div>
-      <div class="column"> 
-        <DxTextBox label="Label" value ="Text" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true">
-        <DxValidator>
-          <DxCustomRule 
-                    message="Error" 
-                    :validation-callback="customCallback"
-                    :reevaluate="true"
-                />
-          </DxValidator>
-        </DxTextBox>
-       </div>
-    </div>
-
-    <div>TextBox Simple with simple button</div>
-    <div class="row">
-        <div class="column"> 
+      <tr>
+        <td>TextBox Simple with simple button</td>
+        <td>
           <DxTextBox label="Label" value ="" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true">
             <DxTextBoxButton name="clear"/>
             <DxTextBoxButton
@@ -45,11 +109,35 @@
               name = "button"
               location="after"
             />
-          </DxTextBox>         
-        </div>
-        <div class="column"> 
-          <DxTextBox label="Label" value ="Text3" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true" >
-            <DxValidator>
+          </DxTextBox>        
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="" label-mode ="floating" :read-only="true" :height="56" :hover-state-enabled="false" :show-clear-button="true">
+            <DxTextBoxButton name="clear"/>
+            <DxTextBoxButton
+              :options="buttonOption"
+              name = "button"
+              location="after"
+            />
+          </DxTextBox>      
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="" label-mode ="floating" :disabled="true" :height="56" :hover-state-enabled="false" :show-clear-button="true">
+            <DxTextBoxButton name="clear"/>
+            <DxTextBoxButton
+              :options="buttonOption"
+              name = "button"
+              location="after"
+            />
+          </DxTextBox>       
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true" >
+          <DxValidator>
           <DxCustomRule 
                     message="Error" 
                     :validation-callback="customCallback"
@@ -63,38 +151,32 @@
               location="after"
             >
             </DxTextBoxButton>
-          </DxTextBox>
-          <DxTextBoxButton name="clear"/> 
-         </div>
-    </div>
-
-    <div class="row">
-        <div class="column"> 
-          <DxTextBox label="Label" value ="" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true" :is-valid="false">
+          </DxTextBox>       
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :read-only="true"  :height="56" :hover-state-enabled="false" :show-clear-button="true">
             <DxTextBoxButton name="clear"/>
             <DxTextBoxButton
               :options="buttonOption"
               name = "button"
               location="after"
             />
-          </DxTextBox>         
-        </div>
-        
-         <div class="column"> 
-          <DxTextBox label="Label" value ="" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true" :disabled="true">
+          </DxTextBox>      
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :disabled="true" :height="56" :hover-state-enabled="false" :show-clear-button="true">
             <DxTextBoxButton name="clear"/>
             <DxTextBoxButton
               :options="buttonOption"
               name = "button"
               location="after"
             />
-          </DxTextBox>         
-        </div>
-    </div>
-
-    <div>Autocomplite</div>
-    <div class="row">
-        <div class="column"> 
+          </DxTextBox>       
+        </td>
+      </tr>
+      <tr>
+        <td>Autocomplite</td>
+        <td>
           <DxAutocomplete
             :data-source="names"
             :show-clear-button="true"
@@ -107,24 +189,18 @@
                 />
           </DxValidator>
           </DxAutocomplete>
-         </div>
+        </td>
+        <td>
+          <DxTextBox label="Label" value ="Text" label-mode ="floating" :read-only="true" :height="56" :hover-state-enabled="false" :show-clear-button="true" :disabled="true" />          
+        </td>
+        <td>
+           
+        </td>
+      </tr>
 
-         <div class="column"> 
-          <DxTextBox label="Label" value ="" label-mode ="floating" :height="56" :hover-state-enabled="false" :show-clear-button="true" :disabled="true">
-            <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton
-              :options="buttonOption"
-              name = "button"
-              location="after"
-            />
-          </DxTextBox>         
-        </div>
-    </div>
-
-
-    <div>TextBox DropList</div>
-    <div class="row">
-        <div class="column"> 
+      <tr>
+        <td>TextBox DropList</td>
+        <td>
           <DxSelectBox
               :search-enabled="true"
               :data-source="simpleProducts"
@@ -136,41 +212,8 @@
               :height="56"
               placeholder=""
             />
-         </div>
-
-         <div class="column"> 
-          <DxSelectBox
-              :search-enabled="true"
-              :data-source="simpleProducts"
-              :show-clear-button="true"
-              display-expr="Name"
-              value-expr="ID"
-              label="Label" 
-              label-mode ="floating"
-              :height="56"
-              :disabled="true"
-              placeholder=""
-            />    
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column"> 
-          <DxSelectBox
-              :search-enabled="true"
-              :data-source="simpleProducts"
-              :show-clear-button="true"
-              display-expr="Name"
-              value-expr="ID"
-              label="Label" 
-              label-mode ="floating"
-              :height="56"
-              placeholder=""
-              :is-valid="false"
-            />
-         </div>
-
-         <div class="column"> 
+        </td>
+        <td>
           <DxSelectBox
               :search-enabled="true"
               :data-source="simpleProducts"
@@ -190,58 +233,94 @@
                     />
               </DxValidator> 
           </DxSelectBox>
-        </div>
-    </div>
+        </td>
+        <td>
+          <DxSelectBox
+              :search-enabled="true"
+              :data-source="simpleProducts"
+              :show-clear-button="true"
+              display-expr="Name"
+              value-expr="ID"
+              label="Label" 
+              label-mode ="floating"
+              :height="56"
+              :disabled="true"
+              placeholder=""
+            />       
+        </td>
+      </tr>
 
-    <div>SelectBox DropTable</div>
-    <div class="row">
-        <div class="column"> 
+      <tr>
+        <td>SelectBox DropTable</td>
+        <td>
           <DropDownBoxWithDataGrid />
-         </div>
-         <div class="column"> 
-          <DropDownBoxWithDataGrid :is-valid="false"/>
-        </div>
-    </div>
+        </td>
+        <td>
+          <DropDownBoxWithDataGrid :is-valid="false"/>       
+        </td>
+        <td>             
+        </td>
+      </tr>
 
-    <div>Text Area</div>
-    <div class="row">
-        <div class="column"> 
+      <tr>
+        <td>Text Area</td>
+        <td>
           <DxTextArea
               label="Label" 
               label-mode ="floating"
               :height="90"
           />
-         </div>
-
-         <div class="column"> 
+        </td>
+        <td>
+          <DxTextArea
+              label="Label" 
+              value="Text"
+              label-mode ="floating"
+              :read-only="true" 
+              :height="90"
+          />       
+        </td>
+        <td>  
           <DxTextArea
               label="Label" 
               label-mode ="floating"
               :height="90"
               :disabled="true"
-          /> 
-        </div>
-    </div>
-    <div class="row">
-        <div class="column"> 
-          <DxTextArea
-              label="Label" 
-              label-mode ="floating"
-              :height="90"
-          />
-         </div>
+          />            
+        </td>
+      </tr>
 
-         <div class="column"> 
+      <tr>
+        <td>&nbsp;</td>
+        <td>
           <DxTextArea
               label="Label" 
+              value="Text"
               label-mode ="floating"
               :height="90"
               :is-valid="false"
           /> 
-        </div>
-    </div>
-
-    
+        </td>
+        <td>
+          <DxTextArea
+              label="Label" 
+              value="Text"
+              label-mode ="floating"
+              :height="90"
+          />
+        </td>
+        <td>   
+          <DxTextArea
+              label="Label" 
+              value="Text"
+              label-mode ="floating"
+              :height="90"  
+              :disabled="true"
+              />      
+        </td>
+      </tr>
+    </table>
+   
              
   </div>
 </template>
@@ -270,6 +349,7 @@ export default {
         focusStateEnabled:false,
         hoverStateEnabled:false,
         activeStateEnabled:false,
+        disabled: false,
         onClick: () => {
           alert(1)
         },

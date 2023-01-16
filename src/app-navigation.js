@@ -17,6 +17,10 @@ export default [
         path: "/inputs"
       },      
       {
+        text: "Buttons",
+        path: "/buttons"
+      },      
+      {
         text: "Grid",
         path: "/grid"
       }

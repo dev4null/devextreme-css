@@ -32,6 +32,8 @@
       :height="250"
       :animation-enabled="false"
       :swipe-enabled="false"
+      :focus-state-enabled="false"
+      :hover-state-enabled="false"
     >
       <TabItem title="Title #1">
         <template #default>
