@@ -1,6 +1,8 @@
 <template>
   <div  class="content-block">
     <h2>Tabs &nbsp; <a href="https://www.figma.com/file/SSDOj1Nc4uCBK0sLLt5CuZ/%F0%9F%A6%85-CRM-Corporate?node-id=6167%3A219002&t=5VvakbjwEF0yxLRF-0" target="_blank">Figma</a></h2>
+    
+    <div> 1й уровень</div>
     <div>
       <DxTabs
         :data-source="longtabs"
@@ -12,6 +14,7 @@
         :hover-state-enabled="false"
       />
 <br/>
+
       <DxTabs
         :data-source="longtabs"
         :width="1200"
@@ -26,13 +29,14 @@
 
 
    <br/>
-
+   
+   <div> 2й уровень</div>
    <div>
     <DxTabPanel
       :height="250"
       :animation-enabled="false"
       :swipe-enabled="false"
-      :focus-state-enabled="false"
+      :focus-state-enabled="false" 
       :hover-state-enabled="false"
     >
       <TabItem title="Title #1">

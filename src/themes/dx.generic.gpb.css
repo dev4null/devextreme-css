@@ -711,7 +711,7 @@
   font: 14px/1 DXIcons;
 }
 .dx-icon-chevronprev::before {
-  content: "\f011";
+  content: "\f012";
 }
 .dx-icon-back {
   font: 14px/1 DXIcons;
@@ -729,7 +729,7 @@
   font: 14px/1 DXIcons;
 }
 .dx-icon-chevronnext::before {
-  content: "\f00e";
+  content: "\f010";
 }
 .dx-icon-chevrondown {
   font: 14px/1 DXIcons;
@@ -2521,6 +2521,12 @@
 .dx-button-mode-contained .dx-icon {
   color: #333;
 }
+
+.dx-tabs-nav-button.dx-button-mode-contained.dx-state-hover {
+  background-color:transparent;
+  border-color: transparent;
+}
+
 .dx-button-mode-contained.dx-state-hover {
   background-color: #f5f5f5;
   border-color: #ddd;
@@ -2529,6 +2535,12 @@
   background-color: #ebebeb;
   border-color: #ddd;
 }
+
+.dx-tabs-nav-button.dx-button-mode-contained.dx-state-active {
+  background-color:transparent;
+  color: #333;
+}
+
 .dx-button-mode-contained.dx-state-active {
   background-color: #c2c2c2;
   border-color: #ddd;
@@ -3960,7 +3972,7 @@
   margin-left: 25px;
 }
 .dx-tabs-nav-button {
-  width: 25px;
+  width: 35px;
   padding: 0;
   height: 100%;
   position: absolute;
@@ -4069,6 +4081,7 @@
 }
 .dx-tabs-nav-button.dx-state-active {
   border: none;
+
 }
 .dx-tabs-nav-button.dx-state-disabled {
   opacity: 1;
@@ -4077,7 +4090,7 @@
   opacity: .6;
 }
 .dx-tab {
-  padding: 17px 24px;
+  padding: 16px 24px;
  /* background-color: #e9efff; */
   color: #262c40;
 }
@@ -4093,10 +4106,11 @@
   margin-left: 0;
 }
 .dx-tab.dx-state-hover {
-  background-color: #e9efff;
+  /*background-color: #e9efff;*/
+  color: #476ef9
 }
 .dx-tab.dx-state-active {
-  background-color: rgba(0,46,169,.2);
+ /* background-color: rgba(0,46,169,.2);*/
   color: #476ef9;
 }
 .dx-tab.dx-state-focused::after {
@@ -16964,14 +16978,14 @@ input.dx-hidden {
 	box-shadow: inset 0 0px #ddd, inset 0px 0 #ddd, inset 0px 0 #ddd;
 
   border: 1px;
-	border-bottom: 4px;
+	border-bottom: 2px;
 	border-bottom-style: solid;
-	border-bottom-color: #2355d7;
+	border-bottom-color: #476ef9;
 
 }
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tab.dx-tab-active .dx-tab-content,
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tab.dx-tab-selected .dx-tab-content {
-  color: #2355d7;
+  color: #476ef9;
 }
 .dx-tabpanel > .dx-tabpanel-tabs .dx-tabs-expanded .dx-tab:not(.dx-tab-selected):first-of-type {
   -webkit-box-shadow: inset 0 0px #ddd, inset 0px 0, inset 0 0px;
