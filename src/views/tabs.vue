@@ -41,17 +41,17 @@
     >
       <TabItem title="Title #1">
         <template #default>
-          Text #1
+         
         </template>
       </TabItem>
       <TabItem title="Title #1">
         <template #default>
-          Text #2
+          
         </template>
       </TabItem>
       <TabItem title="Title #1">
         <template #default>
-          Text #3
+          
         </template>
       </TabItem>
     </DxTabPanel>

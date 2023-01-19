@@ -219,6 +219,7 @@
               :data-source="simpleProducts"
               :show-clear-button="true"
               display-expr="Name"
+              :read-only="true" 
               value-expr="ID"
               label="Label" 
               label-mode ="floating"

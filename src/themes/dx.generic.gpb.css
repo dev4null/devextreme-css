@@ -2420,13 +2420,28 @@
 .dx-button-has-icon .dx-button-content {
   padding: 8px;
 }
+
+.dx-tabs-nav-buttons .dx-button-has-icon .dx-icon {
+  background-position: 0 0;
+  background-size: 22px 22px;
+  padding: 0;
+  font-size: 22px;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 0;
+  margin-left: -4px;
+  margin-top: -4px;
+  font-weight: 900;
+  color: #262c40;
+}
+
 .dx-button-has-icon .dx-icon {
   background-position: 0 0;
   background-size: 22px 22px;
   padding: 0;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
-  line-height: 24px;
+  line-height: 22px;
   margin-right: 0;
   margin-left: -6px;
   margin-top: -4px;
@@ -2523,9 +2538,15 @@
 }
 
 .dx-tabs-nav-button.dx-button-mode-contained.dx-state-hover {
-  background-color:transparent;
-  border-color: transparent;
+  background-color :#e9efff;
+  border-color: #e9efff;
 }
+
+
+.dx-tabs-nav-button.dx-button-mode-contained.dx-state-hover .dx-icon, .dx-tabs-nav-button.dx-button-mode-contained.dx-state-active .dx-icon {
+  color: #476ef9;
+}
+
 
 .dx-button-mode-contained.dx-state-hover {
   background-color: #f5f5f5;
@@ -2537,7 +2558,7 @@
 }
 
 .dx-tabs-nav-button.dx-button-mode-contained.dx-state-active {
-  background-color:transparent;
+  background-color:#e9efff;
   color: #333;
 }
 
@@ -2764,6 +2785,7 @@
   background-color: transparent;
   border-radius: 8px;
 }
+
 .dx-texteditor-buttons-container > .dx-button {
   margin: 1px;
 }
@@ -3972,11 +3994,12 @@
   margin-left: 25px;
 }
 .dx-tabs-nav-button {
-  width: 35px;
+  width: 40px;
   padding: 0;
   height: 100%;
   position: absolute;
   top: 0;
+  z-index: 10;
 }
 .dx-tabs-nav-button-left {
   left: 0;
@@ -4081,11 +4104,19 @@
 }
 .dx-tabs-nav-button.dx-state-active {
   border: none;
-
 }
+
 .dx-tabs-nav-button.dx-state-disabled {
   opacity: 1;
+  
 }
+
+.dx-tabs-nav-button.dx-state-disabled.dx-button .dx-icon{
+  color:#c8cfd9;
+  opacity: 1;
+}
+
+
 .dx-tabs-nav-button.dx-state-disabled .dx-button-content {
   opacity: .6;
 }
