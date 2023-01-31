@@ -7,6 +7,8 @@
           label="Label" 
           label-mode ="floating"
           :is-valid = isValid
+          :read-only = readOnly
+          :disabled = disabled
           :opened.sync="gridBoxOpened"
           :data-source="dropDownBoxDataSource" 
           :open-on-field-click="false"
@@ -62,6 +64,14 @@ export default {
     isValid: {
     default: true,
     type: Boolean
+    },
+    disabled: {
+      default: false,
+      type: Boolean
+    },
+    readOnly: {
+      default: false,
+      type: Boolean
     }
   },
     components: {

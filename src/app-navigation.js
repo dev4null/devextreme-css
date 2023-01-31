@@ -13,9 +13,25 @@ export default [
         path: "/tabs"
       },
       {
-        text: "Inputs",
-        path: "/inputs"
-      },      
+        text: "TextBox",
+        path: "/textbox"
+      }, 
+      {
+        text: "AutoComplete",
+        path: "/autocomplete"
+      },
+      {
+        text: "TextArea",
+        path: "/textarea"
+      }, 
+      {
+        text: "SelectBox",
+        path: "/selectbox"
+      },   
+      {
+        text: "DropDownBox",
+        path: "/dropDownBox"
+      },  
       {
         text: "Buttons",
         path: "/buttons"

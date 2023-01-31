@@ -3,8 +3,12 @@ import Router from "vue-router";
 import Home from "./views/home";
 import Grid from "./views/grid";
 import Tabs from "./views/tabs";
-import Inputs from "./views/inputs"
+import TextBox from "./views/textBox"
 import Buttons from "./views/buttons"
+import Autocomplete from "./views/autoComplete"
+import SelectBox from "./views/selectBox"
+import TextArea from "./views/textArea"
+import dropDownBox from "./views/dropDownBox"
 import defaultLayout from "./layouts/side-nav-outer-toolbar";
 
 
@@ -37,13 +41,45 @@ const router = new Router({
       }
     },
     {
-      path: "/inputs",
-      name: "inputs",
+      path: "/textbox",
+      name: "textbox",
       components: {
         layout: defaultLayout,
-        content: Inputs
+        content: TextBox
       }
     },
+    {
+      path: "/autocomplete",
+      name: "autocomplete",
+      components: {
+        layout: defaultLayout,
+        content: Autocomplete
+      }
+    },  
+    {
+      path: "/selectbox",
+      name: "selectbox",
+      components: {
+        layout: defaultLayout,
+        content: SelectBox
+      }
+    },
+    {
+      path: "/textarea",
+      name: "textarea",
+      components: {
+        layout: defaultLayout,
+        content: TextArea
+      }
+    }, 
+    {
+      path: "/dropDownBox",
+      name: "dropDownBox",
+      components: {
+        layout: defaultLayout,
+        content: dropDownBox
+      }
+    },  
     {
       path: "/buttons",
       name: "buttons",
@@ -52,6 +88,8 @@ const router = new Router({
         content: Buttons
       }
     },   
+
+    
     {
       path: "/",
       redirect: "/home"
