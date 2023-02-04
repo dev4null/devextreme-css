@@ -3,7 +3,8 @@
 * Version: 22.1.6
 * http://js.devexpress.com/ThemeBuilder/
 */
-
+.gpb-ui {
+  
 .dx-validationsummary-item {
   cursor: pointer;
 }
@@ -4607,6 +4608,7 @@
   width: 34px;
   min-width: 34px;
   right: 0;
+  margin-right: -8px;
 }
 .dx-show-clear-button .dx-icon-clear {
   color: #262C40;
@@ -4637,7 +4639,7 @@
   font-size: 16px;
   border-radius: 8px;
   min-height: 34px;
-  margin-top:-1px;
+  margin-top: 1px;
 }
 .dx-editor-underlined .dx-texteditor-input {
   background: 0 0;
@@ -6502,7 +6504,8 @@
   min-width: 34px;
   padding: 1px;
   border-radius: 4px;
-  margin-top: 6px;
+  margin-top: 0px;
+  margin-left: -8px;
 }
 .dx-dropdowneditor-button .dx-button-content {
   text-align: center;
@@ -6519,12 +6522,12 @@
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid transparent;
-  color: #333;
-  font: 18px/18px DXIcons;
+  color: #7187A1;
+  font: 28px/28px DXIcons;
   width: 32px;
   height: 100%;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .dx-state-disabled .dx-dropdowneditor,
 .dx-state-disabled.dx-dropdowneditor {
@@ -6553,7 +6556,7 @@
   top: 50%;
   margin-top: -9px;
   left: 50%;
-  margin-left: -9px;
+  margin-left: -11px;
 }
 .dx-dropdowneditor-input-wrapper .dx-texteditor.dx-editor-filled,
 .dx-dropdowneditor-input-wrapper .dx-texteditor.dx-editor-outlined,
@@ -6603,10 +6606,13 @@
 }
 .dx-dropdowneditor-button.dx-state-active .dx-dropdowneditor-icon,
 .dx-dropdowneditor.dx-dropdowneditor-active .dx-dropdowneditor-icon {
-  background-color: #b3b3b3;
+  background-color: #fff;
   border-color: transparent;
-  color: #333;
+  color: #7187A1;
   opacity: 1;
+  rotate: 180deg;
+  margin-top: 8px;
+  margin-left: 6px;
 }
 .dx-editor-filled .dx-dropdowneditor-button.dx-state-active .dx-dropdowneditor-icon,
 .dx-editor-filled .dx-dropdowneditor.dx-dropdowneditor-active .dx-dropdowneditor-icon,
@@ -6705,7 +6711,10 @@
   white-space: nowrap;
   display: table-cell;
   width: 100%;
+  height: 48px;
+  vertical-align: middle;
 }
+
 .dx-list-item-content::before {
   content: "_";
   color: transparent;
@@ -6987,14 +6996,14 @@
   background-image: url("data:image/svg+xml;charset=UTF-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2024.0.1%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22dx_l_3%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20style%3D%22enable-background%3Anew%200%200%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20style%3D%22fill%3A%23333%3B%22%20d%3D%22M12%2C2C6.5%2C2%2C2%2C6.5%2C2%2C12c0%2C5.5%2C4.5%2C10%2C10%2C10s10-4.5%2C10-10C22%2C6.5%2C17.5%2C2%2C12%2C2z%20M18%2C13H6v-2h12V13z%22%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected {
-  background-color: rgba(0,0,0,.1);
+  background-color: #F5F8FF;
   color: #333;
 }
 .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected .dx-icon {
   color: #333;
 }
 .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected.dx-state-hover:not(.dx-state-focused) {
-  background-color: rgba(0,0,0,.07);
+  background-color: #F5F8FF;
   color: #333;
 }
 .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected .dx-icon-toggle-delete {
@@ -23143,4 +23152,5 @@ input.dx-hidden {
   left: 0;
   background: rgba(0,0,0,.01);
   opacity: .01;
+}
 }

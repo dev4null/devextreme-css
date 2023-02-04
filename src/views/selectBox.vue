@@ -71,7 +71,6 @@
               :height="56"
               :value="2"
               validation-status="invalid">
-            <DxTextBoxButton name="clear"/>
             <DxValidator>
               <DxCustomRule 
                         message="Error" 
@@ -160,12 +159,12 @@
               :height="56"
             >  
             <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton name="dropDown"/>
             <DxTextBoxButton
               :options="buttonOptionInfo"
               name = "info"
               location="after"
             />
+            <DxTextBoxButton name="dropDown"/>
           </DxSelectBox>
         </td>
         <td>
@@ -181,12 +180,12 @@
               :value="2"
             >  
             <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton name="dropDown"/>
             <DxTextBoxButton
               :options="buttonOptionInfo"
               name = "info"
               location="after"
             />
+            <DxTextBoxButton name="dropDown"/>
           </DxSelectBox> 
         </td>
       </tr>
@@ -205,12 +204,12 @@
               validation-status="invalid"
             >  
             <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton name="dropDown"/>
             <DxTextBoxButton
               :options="buttonOptionInfo"
               name = "info"
               location="after"
             />
+            <DxTextBoxButton name="dropDown"/>
             <DxValidator>
               <DxCustomRule 
                         message="Error" 
@@ -234,12 +233,12 @@
               validation-status="invalid"
             >  
             <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton name="dropDown"/>
             <DxTextBoxButton
               :options="buttonOptionInfo"
               name = "info"
               location="after"
             />
+            <DxTextBoxButton name="dropDown"/>
             <DxValidator>
               <DxCustomRule 
                         message="Error" 
@@ -265,12 +264,12 @@
               :read-only="true"
             >  
             <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton name="dropDown"/>
             <DxTextBoxButton
               :options="buttonOptionInfo"
               name = "info"
               location="after"
             />
+            <DxTextBoxButton name="dropDown"/>
           </DxSelectBox>
         </td>
         <td>
@@ -287,17 +286,17 @@
               :read-only="true"
             >  
             <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton name="dropDown"/>
             <DxTextBoxButton
               :options="buttonOptionInfo"
               name = "info"
               location="after"
             />
+            <DxTextBoxButton name="dropDown"/>
           </DxSelectBox> 
         </td>
       </tr>
       <tr>
-        <td>ReadOnly</td>
+        <td>Disabled</td>
         <td>
           <DxSelectBox
               :search-enabled="true"
@@ -311,12 +310,12 @@
               :disabled="true"
             >  
             <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton name="dropDown"/>
             <DxTextBoxButton
               :options="buttonOptionInfo"
               name = "info"
               location="after"
             />
+            <DxTextBoxButton name="dropDown"/>
           </DxSelectBox>
         </td>
         <td>
@@ -333,12 +332,12 @@
               :disabled="true"
             >  
             <DxTextBoxButton name="clear"/>
-            <DxTextBoxButton name="dropDown"/>
             <DxTextBoxButton
               :options="buttonOptionInfo"
               name = "info"
               location="after"
             />
+            <DxTextBoxButton name="dropDown"/>
           </DxSelectBox> 
         </td>
       </tr>

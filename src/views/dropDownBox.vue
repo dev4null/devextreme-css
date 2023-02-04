@@ -9,8 +9,8 @@
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td width="300px">Empty</td>
-        <td width="300px">Fill</td>
+        <td width="375px">Empty</td>
+        <td width="375px">Fill</td>
       </tr>
       <tr>
         <td>Normal</td>
@@ -18,7 +18,7 @@
           <DropDownBoxWithDataGrid />
         </td>
         <td>
-          <DropDownBoxWithDataGrid />   
+          <DropDownBoxWithDataGrid :value="35703"/>   
         </td>
       </tr>
       <tr>
@@ -27,7 +27,7 @@
           <DropDownBoxWithDataGrid :is-valid="false"/>   
         </td>
         <td>
-          <DropDownBoxWithDataGrid :is-valid="false"/>   
+          <DropDownBoxWithDataGrid :is-valid="false" :value="35703"/>   
         </td>
         </tr>
         <tr>
@@ -36,7 +36,7 @@
           <DropDownBoxWithDataGrid :read-only="true"/>   
         </td>
         <td>
-          <DropDownBoxWithDataGrid :read-only="true"/>   
+          <DropDownBoxWithDataGrid :read-only="true" :value="35703"/>   
         </td>       
       </tr>
       <tr>
@@ -45,7 +45,7 @@
           <DropDownBoxWithDataGrid :disabled="true"/>   
         </td> 
         <td>
-          <DropDownBoxWithDataGrid :disabled="true"/>   
+          <DropDownBoxWithDataGrid :disabled="true" :value="35703"/>   
         </td>       
       </tr>
      

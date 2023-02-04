@@ -21,6 +21,7 @@
           @input="onInput" 
           @opened="onOpened"
           @closed="onClosed"
+          :wrapper-attr="loadPanelAttributes"
         >
         <template>
           <dx-data-grid
@@ -40,9 +41,8 @@
               @content-ready="dataGridOnContentReady"
             >             
               <dx-column data-field="OrderDate" data-type="date" format="shortDate"></dx-column>
-              <dx-column data-field="StoreState" data-type="string"></dx-column>
-              <dx-column data-field="StoreCity" data-type="string"></dx-column>
               <dx-column data-field="Employee" data-type="string"></dx-column>
+              <dx-column data-field="StoreCity" data-type="string"></dx-column>
               <dx-paging :enabled="true" :page-size="10"></dx-paging>
               <dx-selection mode="single"></dx-selection>
               <dx-scrolling mode="virtual"></dx-scrolling>
@@ -72,6 +72,9 @@ export default {
     readOnly: {
       default: false,
       type: Boolean
+    },
+    value: {
+      type: Number
     }
   },
     components: {
@@ -94,6 +97,12 @@ export default {
         gridBoxOpened: false,
         focusedRowIndex: 0,
         focusedRowKey: null,
+        loadPanelAttributes: {
+                id: 'elementId',
+                class: 'class-name',
+                showTitle: true,
+                title: "Test"
+            }
       };
     },
     created() {
@@ -114,11 +123,12 @@ export default {
       },
       onBoxInitialized(e){
         this.ddbInstance = e.component;
+        this.gridBoxValue = [this.value]
       },
       gridBox_displayExpr(item) {
         return (
           item &&
-          `${item.Employee}: ${item.StoreState} - ${item.StoreCity} <${item.OrderNumber}>`
+          `${item.Employee}`
         );
       },
       dropDownBoxValueChanged() {
@@ -214,3 +224,6 @@ export default {
     }
 }
 </script>
+<style>
+.class-name {color: red !important;}
+</style>

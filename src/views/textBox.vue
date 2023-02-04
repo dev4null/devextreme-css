@@ -224,6 +224,11 @@
         <td>
           <DxTextBox label="Label" value ="Text" label-mode ="floating" :height="56" validation-status="invalid" :show-clear-button="true">
             <DxTextBoxButton name="clear"/>
+            <DxTextBoxButton
+              :options="buttonOptionInfo"
+              name = "info"
+              location="after"
+            />
             <DxValidator>
               <DxCustomRule 
                         message="Error" 
