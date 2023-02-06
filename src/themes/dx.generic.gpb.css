@@ -3,8 +3,6 @@
 * Version: 22.1.6
 * http://js.devexpress.com/ThemeBuilder/
 */
-.gpb-ui {
-  
 .dx-validationsummary-item {
   cursor: pointer;
 }
@@ -4432,7 +4430,7 @@
   display: -ms-flexbox;
   display: flex;
   width: auto;
-  padding-right: 8px;
+  padding-right: 4px;
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
@@ -4608,7 +4606,7 @@
   width: 34px;
   min-width: 34px;
   right: 0;
-  margin-right: -8px;
+  margin-right: -4px;
 }
 .dx-show-clear-button .dx-icon-clear {
   color: #262C40;
@@ -5594,8 +5592,13 @@
   border-right: 0;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-disabled,
+.dx-editor-outlined.dx-texteditor-with-label.dx-state-disabled
+{
+  border: 0;
+  outline: 0;
+  background-color: #f4f6fb !important;
+}
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly,
-.dx-editor-outlined.dx-texteditor-with-label.dx-state-disabled,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly {
   border: 0;
   outline: 0;
@@ -23153,4 +23156,14 @@ input.dx-hidden {
   background: rgba(0,0,0,.01);
   opacity: .01;
 }
+/*  */ 
+.dx-textarea.dx-invalid.dx-texteditor.dx-editor-outlined.dx-show-invalid-badge .dx-texteditor-input-container::after
+{
+  display: none !important;
 }
+
+.dx-textarea.dx-texteditor.dx-invalid .dx-texteditor-input
+{
+  padding-right: 16px;
+}
+

@@ -350,7 +350,7 @@ import { DxSelectBox } from 'devextreme-vue/select-box';
 import { DxButton as DxTextBoxButton } from 'devextreme-vue/text-box';
 
 import {
-  DxValidator,
+  DxValidator, 
   DxRequiredRule,
   DxCustomRule
 } from 'devextreme-vue/validator';

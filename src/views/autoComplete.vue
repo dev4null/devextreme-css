@@ -98,6 +98,11 @@
         <td>
           <DxAutocomplete :data-source="names" label="Label" value ="Christopher" label-mode ="floating" :height="56" validation-status="invalid" :show-clear-button="true">
             <DxTextBoxButton name="clear"/>
+            <DxTextBoxButton
+              :options="buttonOptionInfo"
+              name = "button"
+              location="after"
+            />
             <DxValidator>
               <DxCustomRule 
                         message="Error" 
@@ -211,7 +216,7 @@ export default {
 
 .fixCustomButtomBefore, 
 .fixCustomButtomAfter {
-  margin-top: 12px !important;
+  margin-top: 10px !important;
 }
 
 .fixCustomButtomBefore {

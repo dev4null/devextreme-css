@@ -15,10 +15,11 @@
       <tr>
         <td>Normal</td>
         <td>
-          <DxTextBox label="Label" value ="" label-mode ="floating" :height="56" hint=" TextBox SimpleTextBox SimpleTextBox Simple TextBox Simple" :show-clear-button="true"/>
+          <DxTextBox label="Label" value ="" label-mode ="floating" :height="56" :show-clear-button="true"/>
         </td>
         <td>
-          <DxTextBox label="Label" value ="Text" label-mode ="floating" :height="56" :show-clear-button="true"/> 
+          <DxTextBox label="Label" :value ="longValue" label-mode ="floating" :height="56" :show-clear-button="true"
+           @value-changed="onValueChanged" @initialized="onInitialized"/> 
         </td>
       </tr>
       <tr>
@@ -385,6 +386,7 @@ import * as linkIcon from "../assets/icons/link.svg";
 export default {
   data() {
     return {  
+      longValue: "1234567890 1234567890 1234567890",
       buttonOptionInfo: {
         icon: infoIcon,
         stylingMode:"text",
@@ -422,7 +424,26 @@ export default {
   methods: {
         customCallback() {
             return false;
-        }
+        },
+        onInitialized(e) {
+          console.log(e)
+          this.$nextTick(() => {
+            if (e.component._labelContainerElement.scrollWidth > e.component._labelContainerElement.clientWidth)
+               e.element.setAttribute("title", e.component.option("value"));
+            else 
+               e.element.setAttribute("title", "");
+         })
+        },
+
+        onValueChanged(e){
+          this.$nextTick(() => {
+            if (e.event.currentTarget.scrollWidth > e.event.currentTarget.clientWidth)
+               e.element.setAttribute("title", e.value);
+            else 
+               e.element.setAttribute("title", "");
+         })
+
+        },
     },    
   components: {
     DxTextBox,  DxValidator, DxCustomRule, DxRequiredRule, DxTextBoxButton 
@@ -439,7 +460,7 @@ export default {
 
 .fixCustomButtomBefore, 
 .fixCustomButtomAfter {
-  margin-top: 12px !important;
+  margin-top: 10px !important;
 }
 
 .fixCustomButtomBefore {
