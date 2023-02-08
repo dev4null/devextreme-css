@@ -3,11 +3,10 @@
     <h2>Buttons <a href="https://www.figma.com/file/QBuh5OJf5xnjfx0Ecm4hvO/%F0%9F%A6%85--%F0%9F%A6%A9-CRM-Corporate-%2F-UI-kit?node-id=5%3A925&t=5ArZtHMG4Ap5a79Y-0" target="_blank">Figma</a></h2>
 
 
-    <table width="100%" pa>
+    <table width="75%">
       <tr>
         <th>&nbsp;</th>
         <th>Active</th>
-        <th>Loading</th>
         <th>Disabled</th>
       </tr>
       <tr>
@@ -21,7 +20,6 @@
               @click="onClick($event)"
             />
           </td>
-        <td>Loading</td>
         <td> 
           <DxButton
               :height="56"
@@ -34,7 +32,6 @@
           </td>
       </tr>
       <tr>
-        
         <td>Secondary</td>
         <td>
           <DxButton
@@ -45,7 +42,6 @@
               @click="onClick($event)"
             />
         </td>
-        <td>Loading</td>
         <td>
           <DxButton
               :height="56"
@@ -62,20 +58,18 @@
           <DxButton
               :height="56"
               text="TextText"
-              type="text"
-              :width="50"
-              styling-mode="contained"
+              type="normal"
+              styling-mode="text"
               @click="onClick($event)"
             />
         </td>
-        <td>Loading</td>
         <td>
           <DxButton
               :height="56"
               text="TextText"
-              type="text"
+              type="normal"
               :disabled="true"
-              styling-mode="contained"
+              styling-mode="text"
             />
         </td>
       </tr>
@@ -90,7 +84,6 @@
               @click="onClick($event)"
             />
         </td>
-        <td>Loading</td>
         <td>
           <DxButton
               :height="56"
@@ -102,7 +95,7 @@
         </td>
       </tr>
       <tr>
-        <td>With icon & text (secondary)</td>
+        <td>With icon & text</td>
         <td>
           <DxButton
               :height="56"
@@ -113,7 +106,6 @@
               @click="onClick($event)"
             />
         </td>
-        <td>Loading</td>
         <td>
           <DxButton
               :height="56"
@@ -125,22 +117,6 @@
               @click="onClick($event)"
             />
         </td>
-      </tr>
-      <tr>
-        <td>Disclosure (primary)</td>
-        <td>
-          <DxDropDownButton
-            text="TextText"
-            :items="actions"
-            key-expr="id"
-            display-expr="text"
-            @item-click="actions($event)"
-            :split-button="true"
-            @button-click="buttonClick($event)"
-          />
-        </td>
-        <td>Loading</td>
-        <td>Disabled</td>
       </tr>
       <tr>
         <td>Icon(primary)</td>
@@ -154,7 +130,6 @@
               @click="onClick($event)"
             />
         </td>
-        <td>Loading</td>
         <td>
           <DxButton
               :height="56"
@@ -174,29 +149,22 @@
               :height="56"
               :width="56"
               icon="floppy"
-              type="default"
+              type="success"
               styling-mode="contained"
               @click="onClick($event)"
             />
         </td>
-        <td>Loading</td>
         <td>
           <DxButton
               :height="56"
               :width="56"
               icon="floppy"
-              type="default"
+              type="success"
               styling-mode="contained"
               :disabled="true"
               @click="onClick($event)"
             />
         </td>
-      </tr>
-      <tr>
-        <td>Link</td>
-        <td>Active</td>
-        <td>Loading</td>
-        <td>Disabled</td>
       </tr>
     </table>
   </div>
@@ -204,7 +172,6 @@
 
 <script>
 import DxButton from 'devextreme-vue/button';
-import DxDropDownButton from 'devextreme-vue/drop-down-button';
 import notify from 'devextreme/ui/notify';
 
 
@@ -234,7 +201,7 @@ export default {
         }
     },    
   components: {
-    DxButton, DxDropDownButton
+    DxButton
   }
 };
 </script>
