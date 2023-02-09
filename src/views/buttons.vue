@@ -7,7 +7,8 @@
       <tr>
         <th>&nbsp;</th>
         <th>Active</th>
-        <th>Disabled</th>
+        <th>Disabled</th> background: #2C54E4;
+
       </tr>
       <tr>
         <td>Primary</td>

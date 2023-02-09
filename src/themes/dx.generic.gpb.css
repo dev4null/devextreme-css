@@ -4631,7 +4631,7 @@
 }
 .dx-texteditor-input {
   margin: 0;
-  padding: 8px 16px;
+  padding: 8px 18px;
   background: rgba(0,0,0,0);
   color: #262c40;
   font-size: 16px;
@@ -5470,11 +5470,11 @@
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-input-container,
 .dx-editor-outlined.dx-texteditor-with-label.dx-textarea .dx-texteditor-input-container {
-  padding-top: 7px;
+  padding-top: 8px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-input-container .dx-texteditor-input,
 .dx-editor-outlined.dx-texteditor-with-label.dx-textarea .dx-texteditor-input-container .dx-texteditor-input {
-  padding-top: 7px;
+  padding-top: 8px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-invalid,
 .dx-editor-outlined.dx-texteditor-with-label.dx-invalid {
@@ -5675,7 +5675,7 @@
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label .dx-texteditor-label .dx-label {
-  padding: 0 2px;
+  padding: 2px;
   border-bottom: 1px solid #ddd;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label .dx-texteditor-label .dx-label span,
@@ -23168,3 +23168,39 @@ input.dx-hidden {
   padding-right: 16px;
 }
 
+.dx-textarea ::-webkit-scrollbar {
+  width: 4px;
+ 
+}
+
+.dx-textarea :hover::-webkit-scrollbar {
+  width: 8px;
+  display: block;
+}
+
+.dx-textarea ::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.dx-textarea ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  margin-left: 2px;
+  background: #C9D2DF;
+  border-right: none;
+  border-left: none;
+}
+
+.dx-textarea ::-webkit-scrollbar-track-piece:end {
+  background: #E1E7EF;
+  margin-bottom: 10px; 
+  margin-left: 2px;
+  border-radius: 8px;
+}
+
+.dx-textarea ::-webkit-scrollbar-track-piece:start {
+  background: #E1E7EF;
+  margin-top: 2px;
+  margin-left: 2px;
+  border-radius: 8px;
+}

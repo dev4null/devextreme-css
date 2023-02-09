@@ -13,23 +13,23 @@
       <tr>
         <td>Normal</td>
         <td>
-          <DxTextArea label="Label" label-mode ="floating" :height="160" />
+          <DxTextArea label="Label" label-mode ="floating" :height ="124" />
         </td>
         <td>
-          <DxTextArea label="Label" value="Text" label-mode ="floating" :height="160" />
+          <DxTextArea label="Label" value="Text" label-mode ="floating" :height ="124"  />
         </td>
       </tr>
       <tr>
         <td>Error</td>
         <td>
-          <DxTextArea label="Label" label-mode ="floating" :height="160" validation-status="invalid">        
+          <DxTextArea label="Label" label-mode ="floating" :height ="124"  validation-status="invalid">        
             <DxValidator>
               <DxCustomRule  message="Error" :validation-callback="customCallback" :reevaluate="true" />
             </DxValidator>
           </DxTextArea>
         </td>
         <td>
-          <DxTextArea label="Label" value="Text" label-mode ="floating" :height="160" validation-status="invalid"> 
+          <DxTextArea label="Label" value="Text" label-mode ="floating" :height ="124" validation-status="invalid"> 
             <DxValidator>
               <DxCustomRule message="Error" :validation-callback="customCallback" :reevaluate="true" />
             </DxValidator>
@@ -39,19 +39,19 @@
       <tr>
         <td>ReadOnly</td>
         <td>
-          <DxTextArea label="Label" label-mode ="floating" :height="160" :read-only="true"/>
+          <DxTextArea label="Label" label-mode ="floating" :height ="124" :read-only="true"/>
         </td>
         <td>
-          <DxTextArea label="Label" value="Text" label-mode ="floating" :height="160" :read-only="true"/>
+          <DxTextArea label="Label" label-mode ="floating" :height ="124" :read-only="true" value="Prepare 2013 Marketing Plan: We need to double revenues in 2013 and our marketing strategy is going to be key here. R&D is improving existing products and creating new products so we can deliver great AV equipment to our customers.Robert, please make certain to create a PowerPoint presentation for the members of the executive team" />
         </td>  
       </tr>
       <tr>
         <td>Disabled</td>
         <td>
-          <DxTextArea label="Label" label-mode ="floating" :height="160" :read-only="true"  :disabled="true"/>
+          <DxTextArea label="Label" label-mode ="floating" :height ="124" :read-only="true"  :disabled="true"/>
         </td>
         <td>
-          <DxTextArea label="Label" value="Text" label-mode ="floating" :height="160" :read-only="true"  :disabled="true"/>
+          <DxTextArea label="Label" label-mode ="floating" :height ="124" :read-only="true"  :disabled="true" value="Prepare 2013 Marketing Plan: We need to double revenues in 2013 and our marketing strategy is going to be key here. R&D is improving existing products and creating new products so we can deliver great AV equipment to our customers.Robert, please make certain to create a PowerPoint presentation for the members of the executive team" />
         </td>  
       </tr>
       <tr>
@@ -65,10 +65,10 @@
       <tr>
         <td>Normal</td>
         <td>
-          <DxTextArea label="Label" label-mode ="floating" :min-height ="70" :autoResizeEnabled="true"/>
+          <DxTextArea label="Label" label-mode ="floating" :min-height ="124" :autoResizeEnabled="true"/>
         </td>
         <td>
-          <DxTextArea label="Label" label-mode ="floating" :min-height="70" :auto-resize-enabled="true"  value="Prepare 2013 Marketing Plan: We need to double revenues in 2013 and our marketing strategy is going to be key here. R&D is improving existing products and creating new products so we can deliver great AV equipment to our customers.Robert, please make certain to create a PowerPoint presentation for the members of the executive team" />
+          <DxTextArea label="Label" label-mode ="floating" :min-height ="124" :autoResizeEnabled="true"  value="Prepare 2013 Marketing Plan: We need to double revenues in 2013 and our marketing strategy is going to be key here. R&D is improving existing products and creating new products so we can deliver great AV equipment to our customers.Robert, please make certain to create a PowerPoint presentation for the members of the executive team" />
         </td>
       </tr>
     </table>
