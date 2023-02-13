@@ -1,13 +1,12 @@
 <template>
   <div class="content-block">
     <h2>Buttons <a href="https://www.figma.com/file/QBuh5OJf5xnjfx0Ecm4hvO/%F0%9F%A6%85--%F0%9F%A6%A9-CRM-Corporate-%2F-UI-kit?node-id=5%3A925&t=5ArZtHMG4Ap5a79Y-0" target="_blank">Figma</a></h2>
-
-
     <table width="75%">
       <tr>
         <th>&nbsp;</th>
         <th>Active</th>
-        <th>Disabled</th> background: #2C54E4;
+        <th>With icon</th>
+        <th>Disabled</th> ;
 
       </tr>
       <tr>
@@ -21,6 +20,16 @@
               @click="onClick($event)"
             />
           </td>
+        <td>
+          <DxButton
+              :height="56"
+              text="TextText"
+              icon="link"
+              type="default"
+              styling-mode="contained"
+              @click="onClick($event)"
+            />
+        </td>
         <td> 
           <DxButton
               :height="56"
@@ -38,6 +47,16 @@
           <DxButton
               :height="56"
               text="TextText"
+              type="success"
+              styling-mode="contained"
+              @click="onClick($event)"
+            />
+        </td>
+        <td>
+          <DxButton
+              :height="56"
+              text="TextText"
+              icon="link"
               type="success"
               styling-mode="contained"
               @click="onClick($event)"
@@ -68,6 +87,16 @@
           <DxButton
               :height="56"
               text="TextText"
+              icon="link"
+              type="normal"
+              styling-mode="text"
+              @click="onClick($event)"
+            />
+        </td>
+        <td>
+          <DxButton
+              :height="56"
+              text="TextText"
               type="normal"
               :disabled="true"
               styling-mode="text"
@@ -89,33 +118,19 @@
           <DxButton
               :height="56"
               text="TextText"
+              icon="link"
+              type="danger"
+              styling-mode="contained"
+              @click="onClick($event)"
+            />
+        </td>
+        <td>
+          <DxButton
+              :height="56"
+              text="TextText"
               type="danger"
               :disabled="true"
               styling-mode="contained"
-            />
-        </td>
-      </tr>
-      <tr>
-        <td>With icon & text</td>
-        <td>
-          <DxButton
-              :height="56"
-              text="TextText"
-              icon="link"
-              type="default"
-              styling-mode="contained"
-              @click="onClick($event)"
-            />
-        </td>
-        <td>
-          <DxButton
-              :height="56"
-              text="TextText"
-              icon="link"
-              type="default"
-              styling-mode="contained"
-              :disabled="true"
-              @click="onClick($event)"
             />
         </td>
       </tr>
@@ -130,6 +145,8 @@
               styling-mode="contained"
               @click="onClick($event)"
             />
+        </td>
+        <td>
         </td>
         <td>
           <DxButton
@@ -156,11 +173,39 @@
             />
         </td>
         <td>
+        </td>
+        <td>
           <DxButton
               :height="56"
               :width="56"
               icon="floppy"
               type="success"
+              styling-mode="contained"
+              :disabled="true"
+              @click="onClick($event)"
+            />
+        </td>
+      </tr>
+      <tr>
+        <td>Icon(Danger)</td>
+        <td>
+          <DxButton
+              :height="56"
+              :width="56"
+              icon="floppy"
+              type="danger"
+              styling-mode="contained"
+              @click="onClick($event)"
+            />
+        </td>
+        <td>
+        </td>
+        <td>
+          <DxButton
+              :height="56"
+              :width="56"
+              icon="floppy"
+              type="danger"
               styling-mode="contained"
               :disabled="true"
               @click="onClick($event)"
