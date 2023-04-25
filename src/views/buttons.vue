@@ -6,7 +6,7 @@
         <th>&nbsp;</th>
         <th>Active</th>
         <th>With icon</th>
-        <th>Disabled</th> ;
+        <th>Disabled</th>
 
       </tr>
       <tr>
