@@ -13977,7 +13977,7 @@
 }
 .dx-datagrid-rowsview .dx-row.dx-group-row:not(.dx-row-focused) {
   color: #262C40;
-  background-color: #BAC7D7;
+  background-color: #EFF3FD;
 }
 .dx-datagrid-rowsview .dx-row.dx-group-row td {
   border-top-color: #ddd;
@@ -14460,7 +14460,7 @@ input.dx-hidden {
 .dx-header-row > td {
   white-space: nowrap;
   overflow: hidden;
-  background-color: #BAC7D7;
+  background-color: #EFF3FD;
   color: #262C40;
   
 }

@@ -72,10 +72,6 @@
               styling-mode="contained"
             />
       </template>
-
-
-
-
       <dx-column type="selection" [width]="50"></dx-column>
       <dx-column data-field="Task_ID" :width="80" />
       <dx-column data-field="Task_Completion" caption="Completion" />
@@ -89,6 +85,38 @@
       <dx-column data-field="ResponsibleEmployee.Employee_Full_Name" caption="Assigned To" :allow-sorting="false" />
       <dx-column data-field="Task_Start_Date"  caption="Start Date"  data-type="date"/>
     </dx-data-grid>
+<br/>
+    <dx-data-grid    
+      :data-source="dataSourceConfig"
+      :show-borders="true"
+      :height="500"
+      :show-row-lines="true">
+      <dx-paging :page-size="10" />
+      <dx-pager :show-page-size-selector="true" :show-info="true" :allowed-page-sizes="[10, 20, 50]" :show-navigation-buttons="true"/>
+      <dx-filter-row :visible="true" />
+      <DxFilterPanel :visible="true"/>
+      <DxFilterBuilderPopup/>
+      <dx-selection  mode="multiple"/>
+      <dx-sorting mode="multiple"/>
+      <dx-header-filter :visible="true" />
+
+      <dx-column data-field="Task_ID" :width="80" :allow-filtering="false"/>
+      <dx-column data-field="Task_Completion" caption="Completion" />
+      <dx-column data-field="Task_Subject" caption="Subject" :allow-filtering="false"/>
+      <dx-column data-field="Task_Description" caption="Description" :allow-sorting="false" :allow-filtering="false"/>
+      <dx-column data-field="Task_Status"  caption="Status"  >
+        <dx-header-filter>
+          <dx-search :enabled="true"/>
+        </dx-header-filter>
+      </dx-column>
+
+      <dx-column data-field="Task_Priority"  caption="Priority">
+        <dx-lookup display-expr="name"  value-expr="value" :data-source="priorities"/>
+      </dx-column>
+      <dx-column data-field="ResponsibleEmployee.Employee_Full_Name" caption="Assigned To" :allow-sorting="false"  :allow-filtering="false"/>
+      <dx-column data-field="Task_Start_Date"  caption="Start Date"  data-type="date" :allow-filtering="false"/>
+    </dx-data-grid>
+
   </div>
   </div>
 </template>
@@ -108,6 +136,10 @@ import DxDataGrid, {
   DxGrouping,
   DxToolbar,
   DxItem,
+  DxHeaderFilter,
+  DxSearch,
+  DxFilterPanel,
+  DxFilterBuilderPopup,
 } from "devextreme-vue/data-grid";
 
 const priorities = [
@@ -165,7 +197,11 @@ export default {
     DxGrouping,
     DxToolbar,
     DxItem,
-    DxButton
+    DxButton,
+    DxHeaderFilter,
+    DxSearch,
+    DxFilterPanel,
+    DxFilterBuilderPopup,
   }
 };
 </script>
